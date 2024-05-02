@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "104780306420",
+    "firebase_url": "https://sbsr-g-default-rtdb.firebaseio.com",
+    "project_id": "sbsr-g",
+    "storage_bucket": "sbsr-g.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104780306420:android:c9ba1081d4e2a5630f8ba1",
+        "android_client_info": {
+          "package_name": "com.example.sbsr_admin_panel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "104780306420-crghrbp2v6s73m4l1a8rj57g6l1hcdko.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZkBZiZ-9jzBu15Gn9dIfxptsL19gUEfk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "104780306420-crghrbp2v6s73m4l1a8rj57g6l1hcdko.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "104780306420-24aiibofov8i5fh7f3qv5t2qkia3fjtp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.sbsrGrad"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104780306420:android:8d3468ee1517f70f0f8ba1",
+        "android_client_info": {
+          "package_name": "com.example.sbsr_grad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "104780306420-shduuld8k4328esp0p9v3ajfou3bvhic.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sbsr_grad",
+            "certificate_hash": "e33801bfeee9d31dd76bb9a8ffe5a647b7090bdd"
+          }
+        },
+        {
+          "client_id": "104780306420-crghrbp2v6s73m4l1a8rj57g6l1hcdko.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZkBZiZ-9jzBu15Gn9dIfxptsL19gUEfk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "104780306420-crghrbp2v6s73m4l1a8rj57g6l1hcdko.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "104780306420-24aiibofov8i5fh7f3qv5t2qkia3fjtp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.sbsrGrad"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

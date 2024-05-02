@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sbsr_admin_panel/Core/Theme/Theme.dart';
+
+import 'package:sbsr_admin_panel/Presentation/UI/BusScreen/BusScreenView.dart';
+import 'package:sbsr_admin_panel/Presentation/UI/StationScreen/StationScreenView.dart';
 import 'package:sbsr_admin_panel/Presentation/UI/Widgets/MainContainer.dart';
 
 class HomeView extends StatefulWidget {
@@ -24,26 +26,20 @@ class _HomeViewState extends State<HomeView> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    MainContainer(title: "Add Bus To Database",
-                        buttonTitle: "buttonTitle",
-                        callBackFunction: () {}),
-                    MainContainer(title: "Add Bus To Database",
-                        buttonTitle: "buttonTitle",
-                        callBackFunction: () {}),
-
-                  ],
-                ),
-                const SizedBox(height: 30,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    MainContainer(title: "Add Bus To Database",
-                        buttonTitle: "buttonTitle",
-                        callBackFunction: () {}),
-                    MainContainer(title: "Add Bus To Database",
-                        buttonTitle: "buttonTitle",
-                        callBackFunction: () {}),
-
+                    InkWell(
+                      overlayColor: MaterialStateProperty.all(Colors.transparent),
+                      onTap: goToBusScreen,
+                      child: MainContainer(
+                          title: "Bus",
+                          containerImage: "assets/images/bus.png"),
+                    ),
+                    InkWell(
+                      overlayColor: MaterialStateProperty.all(Colors.transparent),
+                      onTap: goToStationScreen,
+                      child: MainContainer(
+                          title: "Station",
+                          containerImage: "assets/images/busStop.png"),
+                    )
                   ],
                 ),
               ],
@@ -52,5 +48,11 @@ class _HomeViewState extends State<HomeView> {
         ],
       ),
     );
+  }
+  void goToStationScreen(){
+    Navigator.pushNamed(context, StationScreenView.routeName);
+  }
+  void goToBusScreen() {
+    Navigator.pushNamed(context, BusScreenView.routeName);
   }
 }
