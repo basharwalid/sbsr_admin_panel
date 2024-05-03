@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sbsr_admin_panel/Core/Theme/Theme.dart';
+import 'package:sbsr_admin_panel/Presentation/UI/BusScreen/RemoveBusScreen/RemoveBusScreen.dart';
+import 'package:sbsr_admin_panel/Presentation/UI/StationScreen/AddStationScreen/AddStationScreen.dart';
+import 'package:sbsr_admin_panel/Presentation/UI/StationScreen/RemoveStationScreen/RemoveStationScreenView.dart';
 import 'package:sbsr_admin_panel/Presentation/UI/Widgets/MainContainer.dart';
 
 class StationScreenView extends StatefulWidget {
@@ -31,11 +34,13 @@ class _StationScreenViewState extends State<StationScreenView> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   InkWell(
+                    onTap: goToAddStationScreen,
                     child: MainContainer(
                         title: "Add Station",
                         containerImage: "assets/images/bus.png"),
                   ),
                   InkWell(
+                    onTap: goToDeleteStationScreen,
                     child: MainContainer(
                         title: "Delete Station",
                         containerImage: "assets/images/bus.png"),
@@ -50,5 +55,13 @@ class _StationScreenViewState extends State<StationScreenView> {
             ),
           ],
         ));
+  }
+
+  void goToAddStationScreen() {
+    Navigator.pushNamed(context,AddStationScreen.routeName);
+  }
+
+  void goToDeleteStationScreen() {
+    Navigator.pushNamed(context,RemoveStationScreen.routeName);
   }
 }

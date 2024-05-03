@@ -28,58 +28,38 @@ class AddBusScreenViewModel {
     }
   }
 
-  String? busFromValidation(String busName) {
-    if (busName.isEmpty) {
+  String? busFromValidation(String busFrom) {
+    if (busFrom.isEmpty) {
       return "bus name Can't be Empty";
     } else {
       return null;
     }
   }
 
-  String? busToValidation(String busName) {
-    if (busName.isEmpty) {
+  String? busToValidation(String busTo) {
+    if (busTo.isEmpty) {
       return "bus name Can't be Empty";
     } else {
       return null;
-    }
-  }
-
-  Future<void> addBusToDataBase(Bus bus) async {
-    try{
-      await database.addBus(Bus(
-        uid: busIDController.text,
-        busName: busNameController.text,
-        from: busFromController.text,
-        nextStation: "",
-        to: busToController.text,
-      ),bus.uid);
-    }catch(e){
-      print(e.toString());
     }
   }
 
   Future<void> addBusToFirebase() async {
-    // Get values from text editing controllers
     String busID = busIDController.text;
     String busName = busNameController.text;
     String busFrom = busFromController.text;
     String busTo = busToController.text;
-
-    // Create a Bus object (assuming you have a Bus class)
     Bus bus = Bus(
-      uid: busID, // Assuming uid is the bus ID
+      uid: busID,
       busName: busName,
       from: busFrom,
       to: busTo,
       nextStation: '',
     );
-
-    // Call the addBus function from your database
-    try{
-      await database.addBus(bus, busID);// Assuming database is a property holding the database object
-    }catch(e){
+    try {
+      await database.addBus(bus, busID);
+    } catch (e) {
       print(e);
     }
-
   }
 }

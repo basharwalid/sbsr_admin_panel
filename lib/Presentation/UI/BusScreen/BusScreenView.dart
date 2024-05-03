@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sbsr_admin_panel/Core/Theme/Theme.dart';
 import 'package:sbsr_admin_panel/Presentation/UI/BusScreen/AddBusScreen/AddBusScreenView.dart';
+import 'package:sbsr_admin_panel/Presentation/UI/BusScreen/RemoveBusScreen/RemoveBusScreen.dart';
 import 'package:sbsr_admin_panel/Presentation/UI/Widgets/MainContainer.dart';
 
 class BusScreenView extends StatefulWidget {
@@ -33,17 +34,21 @@ class _BusScreenViewState extends State<BusScreenView> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   InkWell(
+                    overlayColor: MaterialStateProperty.all(Colors.transparent),
                     onTap: goToAddBusScreen,
                     child: MainContainer(
                         title: "Add Bus",
                         containerImage: "assets/images/bus.png"),
                   ),
                   InkWell(
+                    overlayColor: MaterialStateProperty.all(Colors.transparent),
+                    onTap: goToRemoveBusScreen,
                     child: MainContainer(
                         title: "Delete Bus",
                         containerImage: "assets/images/bus.png"),
                   ),
                   InkWell(
+                    overlayColor: MaterialStateProperty.all(Colors.transparent),
                     child: MainContainer(
                         title: "Update Bus",
                         containerImage: "assets/images/bus.png"),
@@ -56,5 +61,8 @@ class _BusScreenViewState extends State<BusScreenView> {
   }
   void goToAddBusScreen(){
     Navigator.pushNamed(context, AddBusScreenView.routeName);
+  }
+  void goToRemoveBusScreen(){
+    Navigator.pushNamed(context, RemoveBusScreen.routeName);
   }
 }

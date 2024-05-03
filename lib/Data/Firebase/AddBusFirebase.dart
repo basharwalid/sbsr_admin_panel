@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:sbsr_admin_panel/Data/Model/Bus.dart';
+
 BusDatabase injectFirebaseBusDatabase() {
   return BusDatabase.getInstance();
 }
@@ -23,6 +24,16 @@ class BusDatabase {
   }
 
   Future<void> addBus(Bus bus, String uid) async {
-    await getCollectionReference().doc(uid).set(bus);
+    await getCollectionReference().add(bus);
+  }
+  Future<void> deleteBus(String fieldValue) async {
+    final snapshot = await getCollectionReference().get();
+    final docs = snapshot.docs;
+
+    for (var doc in docs) {
+      if (doc.data().uid == fieldValue) {
+        await doc.reference.delete();
+      }
+    }
   }
 }

@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:sbsr_admin_panel/Core/Theme/Theme.dart';
 import 'package:sbsr_admin_panel/Presentation/UI/BusScreen/AddBusScreen/AddBusScreenView.dart';
 import 'package:sbsr_admin_panel/Presentation/UI/BusScreen/BusScreenView.dart';
+import 'package:sbsr_admin_panel/Presentation/UI/BusScreen/RemoveBusScreen/RemoveBusScreen.dart';
 import 'package:sbsr_admin_panel/Presentation/UI/HomeScreen/HomeView.dart';
+import 'package:sbsr_admin_panel/Presentation/UI/StationScreen/AddStationScreen/AddStationScreen.dart';
+import 'package:sbsr_admin_panel/Presentation/UI/StationScreen/RemoveStationScreen/RemoveStationScreenView.dart';
 import 'package:sbsr_admin_panel/Presentation/UI/StationScreen/StationScreenView.dart';
 import 'package:sbsr_admin_panel/firebase_options.dart';
 
@@ -29,7 +32,10 @@ class MyApp extends StatelessWidget {
         HomeView.routeName: (_) => const HomeView(),
         BusScreenView.routeName: (_) => const BusScreenView(),
         StationScreenView.routeName: (_) => const StationScreenView(),
-        AddBusScreenView.routeName: (_) => const AddBusScreenView()
+        AddBusScreenView.routeName: (_) => const AddBusScreenView(),
+        RemoveBusScreen.routeName: (_) => const RemoveBusScreen(),
+        AddStationScreen.routeName: (_) => const AddStationScreen(),
+        RemoveStationScreen.routeName: (_) => const RemoveStationScreen()
       },
       initialRoute: HomeView.routeName,
     );
